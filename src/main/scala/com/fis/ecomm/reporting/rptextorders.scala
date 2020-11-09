@@ -16,7 +16,7 @@ object rptextorders {
       .builder()
       .appName("rpt_ext_orders")
       .config("spark.sql.warehouse.dir", "/tmp")
-      .config("spark.hadoop.validateOutputSpecs", "false")
+      //.config("spark.hadoop.validateOutputSpecs", "false")
       .config("spark.debug.maxToStringFields", 100)
       .config("spark.scheduler.mode", "FAIR")
       .config("spark.sql.sources.partitionOverwriteMode", "dynamic")
