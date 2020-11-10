@@ -9,9 +9,6 @@ object rptextorders {
 
   def main(args: Array[String]) {
 
-    var Exitcode=0
-
-
     val spark = SparkSession
       .builder()
       .appName("rpt_ext_orders")
@@ -79,10 +76,8 @@ object rptextorders {
     } catch {
       case e: Throwable =>
         println(e)
-        Exitcode = 1
     } finally {
       spark.stop()
-      System.exit(Exitcode)
     }
   }
 }
