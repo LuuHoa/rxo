@@ -68,7 +68,6 @@ object rptextorders {
       remove_Dates.foreach {
       columns => {
         var extract_date = columns.toString.replace("[", "").replace("]", "")
-        println("hdfs dfs -rm -r  -skipTrash " + target_path + "/created_date=" + extract_date)
         "hdfs dfs -rm -r -skipTrash " + target_path + "/created_date=" + extract_date !
       }}
       }
